@@ -8,5 +8,5 @@ public class User
     public int Id { get; set; } 
     [Required]
     public string Name { get; set; }
-    //public ICollection<Adress> Adresses { get; set; }
+    public ICollection<Adress> Adresses { get; set; } = new List<Adress>();
 }

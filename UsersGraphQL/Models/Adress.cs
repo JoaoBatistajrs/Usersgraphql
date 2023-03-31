@@ -11,4 +11,6 @@ public class Adress
     [Required]
     public int City { get; set; }
     public long PostalCode { get; set; }
+    public int UserId { get; set; }
+    public User User { get; set; }  
 }
