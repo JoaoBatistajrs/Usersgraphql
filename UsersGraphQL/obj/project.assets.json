@@ -4875,11 +4875,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\UsersGraphQL\\UsersGraphQL\\UsersGraphQL.csproj",
+      "projectUniqueName": "C:\\Dev\\.net\\Usersgraphql\\UsersGraphQL\\UsersGraphQL.csproj",
       "projectName": "UsersGraphQL",
-      "projectPath": "C:\\Dev\\UsersGraphQL\\UsersGraphQL\\UsersGraphQL.csproj",
+      "projectPath": "C:\\Dev\\.net\\Usersgraphql\\UsersGraphQL\\UsersGraphQL.csproj",
       "packagesPath": "C:\\Users\\joao.santos\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\UsersGraphQL\\UsersGraphQL\\obj\\",
+      "outputPath": "C:\\Dev\\.net\\Usersgraphql\\UsersGraphQL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\joao.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",

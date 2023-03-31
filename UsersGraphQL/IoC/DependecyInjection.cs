@@ -9,7 +9,10 @@ public static class DependecyInjection
     public static IServiceCollection AddInfraStrucuture(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddPooledDbContextFactory<UsersContext>(options => options.UseSqlServer(configuration.GetConnectionString("UsersConnectionStrings")));
-        services.AddGraphQLServer().AddQueryType<Query>();
+        services
+            .AddGraphQLServer()
+            .AddQueryType<Query>()
+            .AddProjections();
 
         return services;
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DQdQdPxAO0Bm/WIjaJ9FQMQnauRruiIL6ga+DfMz2eSK7iLPB0SIsJxQyKd7H/zaLc3yDejVkiGAfMo4P/H8cg==",
+  "dgSpecHash": "ite5s9TL8TGI2r/f+yZwLjniDhX1Bm+aQ1m0+f32/12xe8yIpDi0Y+Pe++AoRLoX894PYEUyLur/HgTtuHJGog==",
   "success": true,
-  "projectFilePath": "C:\\Dev\\UsersGraphQL\\UsersGraphQL\\UsersGraphQL.csproj",
+  "projectFilePath": "C:\\Dev\\.net\\Usersgraphql\\UsersGraphQL\\UsersGraphQL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joao.santos\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\joao.santos\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

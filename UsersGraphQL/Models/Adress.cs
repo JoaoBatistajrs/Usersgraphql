@@ -9,7 +9,7 @@ public class Adress
     [Required]
     public string Street { get; set; }
     [Required]
-    public int City { get; set; }
+    public string City { get; set; }
     public long PostalCode { get; set; }
     public int UserId { get; set; }
     public User User { get; set; }  
