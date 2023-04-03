@@ -14,7 +14,9 @@ public static class DependecyInjection
             .AddGraphQLServer()
             .AddQueryType<Query>()
             .AddType<AdressesTypes>()
-            .AddType<UsersTypes>();
+            .AddType<UsersTypes>()
+            .AddFiltering()
+            .AddSorting();
 
         return services;
     }
