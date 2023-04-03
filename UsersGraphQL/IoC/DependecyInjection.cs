@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using UsersGraphQL.GraphQL;
+using UsersGraphQL.GraphQL.Users;
 using UsersGraphQL.InfraStructure;
 
 namespace UsersGraphQL.IoC;
@@ -12,7 +13,8 @@ public static class DependecyInjection
         services
             .AddGraphQLServer()
             .AddQueryType<Query>()
-            .AddProjections();
+            .AddType<AdressesTypes>()
+            .AddType<UsersTypes>();
 
         return services;
     }

@@ -1,4 +1,3 @@
-using GraphQL.Server.Ui.Voyager;
 using UsersGraphQL.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
