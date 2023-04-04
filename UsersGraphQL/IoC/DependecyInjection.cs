@@ -17,8 +17,10 @@ public static class DependecyInjection
             .AddMutationType<Mutation>()
             .AddType<AdressesTypes>()
             .AddType<UsersTypes>()
+            .AddSubscriptionType<Subscription>()
             .AddFiltering()
-            .AddSorting();
+            .AddSorting()
+            .AddInMemorySubscriptions();
 
         return services;
     }

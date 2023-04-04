@@ -5,6 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddInfraStrucuture(builder.Configuration);
 
 var app = builder.Build();
+
+app.UseWebSockets();
+
 app.UseRouting();
 app.UseEndpoints(endpoints =>
 {

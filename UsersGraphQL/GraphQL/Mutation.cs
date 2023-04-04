@@ -1,4 +1,5 @@
-﻿using UsersGraphQL.GraphQL.Adresses;
+﻿using HotChocolate.Subscriptions;
+using UsersGraphQL.GraphQL.Adresses;
 using UsersGraphQL.GraphQL.Users;
 using UsersGraphQL.InfraStructure;
 using UsersGraphQL.Models;
@@ -8,7 +9,8 @@ namespace UsersGraphQL.GraphQL;
 public class Mutation
 {
     [UseDbContext(typeof(UsersContext))]
-    public async Task<AddUserPayload> AddUserAsync(AddUserInput input, [ScopedService] UsersContext context)
+    public async Task<AddUserPayload> AddUserAsync(AddUserInput input, [ScopedService] UsersContext context,
+                                                    [Service] ITopicEventSender eventSender, CancellationToken cancellationToken)
     {
         var user = new User
         {
@@ -16,7 +18,9 @@ public class Mutation
         };
 
         context.Users.Add(user);
-        await context.SaveChangesAsync();
+        await context.SaveChangesAsync(cancellationToken);
+
+        await eventSender.SendAsync(nameof(Subscription.OnUserAdded), user, cancellationToken);
 
         return new AddUserPayload(user);
     }
