@@ -13,12 +13,12 @@ public class UsersTypes : ObjectType<User>
             .Field(u => u.Adresses)
             .ResolveWith<Resolvers>(u => u.GetAdresses(default!, default!))
             .UseDbContext<UsersContext>()
-            .Description("");
+            .Description("This is a list of adresses in an User.");
     }
 
     private class Resolvers
     {
-        public IQueryable<Adress> GetAdresses(User user, [ScopedService] UsersContext context)
+        public IQueryable<Adress> GetAdresses([Parent] User user, [ScopedService] UsersContext context)
         {
             return context.Adresses.Where(a => a.UserId == user.Id);
         }

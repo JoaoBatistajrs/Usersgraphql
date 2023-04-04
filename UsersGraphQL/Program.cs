@@ -8,7 +8,7 @@ var app = builder.Build();
 app.UseRouting();
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapGraphQL("/graphql");
+    endpoints.MapGraphQL("/graphql/");
     endpoints.MapGraphQLVoyager("ui/voyager");
 });
 

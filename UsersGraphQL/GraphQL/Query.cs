@@ -6,7 +6,6 @@ namespace UsersGraphQL.GraphQL;
 public class Query
 {
     [UseDbContext(typeof(UsersContext))]
-    [UseProjection]
     [UseFiltering]
     [UseSorting]
     public IQueryable<User> GetUsers([ScopedService] UsersContext context)
@@ -15,7 +14,6 @@ public class Query
     }
 
     [UseDbContext(typeof(UsersContext))]
-    [UseProjection]
     [UseFiltering]
     [UseSorting]
     public IQueryable<Adress> GetAdresses([ScopedService] UsersContext context)
